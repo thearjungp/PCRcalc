@@ -23,11 +23,11 @@ export class ToolbarComponent implements OnInit {
   ngOnInit(): void {
     this.nameIdentifierService.indexSelected.subscribe((name) => {
       this.title = name
-      // this.loadData()
+      this.loadData()
     })
-    // this.dataFetcherService.loadCountTriggerVariable.subscribe((val) =>  this.loadData())
+    this.dataFetcherService.loadCountTriggerVariable.subscribe((val) =>  this.loadData())
     this.loadData()
-    // setInterval(() => this.loadData(), 60000)
+    setInterval(() => this.loadData(), 60000)
   }
 
   loadData()

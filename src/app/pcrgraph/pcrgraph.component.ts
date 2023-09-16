@@ -80,13 +80,13 @@ export class PcrgraphComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.nameIdentifierService.indexSelected.subscribe((index) => {
       this.index = index;
-      // this.loadData();
+      this.loadData();
       setTimeout(() => this.loadData(), 500);
       // Object.assign(this, this.data)
     });
 
     this.dataFetcherService.loadCountTriggerVariable.subscribe((val) => {
-      // this.loadData();
+      this.loadData();
       setTimeout(() => this.loadData(), 500);
     });
 
