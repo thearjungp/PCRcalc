@@ -81,18 +81,11 @@ export class PcrloggerComponent implements OnInit {
           fulldat[i]['time'] = hour + ":" + min;
         }
 
-
-        // this.newRecord.time = d.toLocaleDateString() + "  " + d.toLocaleTimeString()
-
-        // fulldat.map((b:SingleRecord) => {
-        //   this.dataSource.push(b)
-        // })
         this.dataSource = fulldat
 
 
         this.table.renderRows();
 
-        // console.log(this.dataSource)
 
         
 

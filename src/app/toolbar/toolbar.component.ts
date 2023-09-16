@@ -23,12 +23,11 @@ export class ToolbarComponent implements OnInit {
   ngOnInit(): void {
     this.nameIdentifierService.indexSelected.subscribe((name) => {
       this.title = name
-      this.loadData()
+      // this.loadData()
     })
-    this.dataFetcherService.loadCountTriggerVariable.subscribe((val) =>  this.loadData()
-    )
+    // this.dataFetcherService.loadCountTriggerVariable.subscribe((val) =>  this.loadData())
     this.loadData()
-    setInterval(() => this.loadData(), 60000)
+    // setInterval(() => this.loadData(), 60000)
   }
 
   loadData()
@@ -50,22 +49,6 @@ export class ToolbarComponent implements OnInit {
 
       }
     )
-
-    // this.dataFetcherService.getDataOfSymbol('NIFTY').subscribe(
-    //   (res:any) => {
-    //     this.NIFTYCurrentValue = res[res.length-1]['ltp']
-    //   }
-    // )
-
-    // this.dataFetcherService.getDataOfSymbol('BANKNIFTY').subscribe(
-    //   (res:any) => {
-    //     this.BANKNIFTYCurrentValue = res[res.length-1]['ltp']
-        
-    //   }
-    // )
-    
-    // console.log(this.NIFTYCurrentValue)
-    // console.log(this.BANKNIFTYCurrentValue)
 
     setTimeout(() => {
       this.PECERatio = (Math.floor(this.totalPEChange / this.totalCEChange * 1000) /1000).toFixed(2);
