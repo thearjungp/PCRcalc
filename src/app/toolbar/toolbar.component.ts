@@ -63,6 +63,10 @@ export class ToolbarComponent implements OnInit {
 
       // this.dataFetcherService.loadCountTriggerVariable.next(this.dataFetcherService.loadCountTriggerVariable.getValue() + " a"); 
       
+      setTimeout(() => {
+        this.loadData()
+      }, 600)
+
     });
   }
 
