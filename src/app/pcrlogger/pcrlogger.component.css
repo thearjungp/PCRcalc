@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    z-index: -1;
+  }
+
+/* tr.mat-row
+{
+  height: 2em;
+} */
+
+tr.mat-header-row
+{
+  position: sticky;
+  top: calc(64px)
+  
+  /* top: calc(100vh-64px); */
+}
+
+tr.mat-row
+{
+  height: 2em;
+}
+
+::ng-deep .mat-table
+{
+  margin-top: 64px;
+}
+
+
+.table-container {
+  position: sticky;
+  top: 0;
+}

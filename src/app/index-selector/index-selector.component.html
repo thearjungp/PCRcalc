@@ -1,0 +1,10 @@
+<div class="is">
+    <mat-form-field appearance="outline" >
+        <mat-label>Index</mat-label>
+        <mat-select [value]="selectedIndex" (selectionChange)="changeIndex($event.value)">
+            <mat-option *ngFor="let index of indices" [value]="index">
+                {{ index }}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>

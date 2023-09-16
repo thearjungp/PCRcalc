@@ -1,0 +1,14 @@
+{
+    "NIFTY": [
+        {
+            "id": 1,
+            "time": "15/05/2022",
+            "totalCE": 50000,
+            "changeInCE": 0,
+            "totalPE": 100000,
+            "changeInPE": 0,
+            "pcr": 2,
+            "index": "NIFTY"
+        }
+    ]
+}

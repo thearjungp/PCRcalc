@@ -1,0 +1,54 @@
+<div class="table-container">
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Time Column -->
+    <ng-container matColumnDef="time">
+      <th mat-header-cell *matHeaderCellDef> Time </th>
+      <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+    </ng-container>
+
+    <!-- Total CE Column -->
+    <ng-container matColumnDef="totalCE">
+      <th mat-header-cell *matHeaderCellDef> CE </th>
+      <td mat-cell *matCellDef="let element"> {{element.totalCE}} </td>
+    </ng-container>
+
+    <!-- Change in CE Column -->
+    <ng-container matColumnDef="changeInCE">
+      <th mat-header-cell *matHeaderCellDef> CE Change </th>
+      <td mat-cell *matCellDef="let element"> {{element.changeInCE}} </td>
+    </ng-container>
+
+    <!-- Total PE Column -->
+    <ng-container matColumnDef="totalPE">
+      <th mat-header-cell *matHeaderCellDef> PE </th>
+      <td mat-cell *matCellDef="let element"> {{element.totalPE}} </td>
+    </ng-container>
+
+    <!-- change in PE Column -->
+    <ng-container matColumnDef="changeInPE">
+      <th mat-header-cell *matHeaderCellDef> PE Change </th>
+      <td mat-cell *matCellDef="let element"> {{element.changeInPE}} </td>
+    </ng-container>
+
+    <!-- PCR Column -->
+    <ng-container matColumnDef="pcr">
+      <th mat-header-cell *matHeaderCellDef> PCR </th>
+      <td mat-cell *matCellDef="let element"> {{element.pcr}} </td>
+    </ng-container>
+
+    <!-- LTP Column -->
+    <ng-container matColumnDef="ltp">
+      <th mat-header-cell *matHeaderCellDef> {{index}} </th>
+      <td mat-cell *matCellDef="let element"> {{element.ltp}} </td>
+    </ng-container>
+
+    <tr class="table-heads" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+</div>

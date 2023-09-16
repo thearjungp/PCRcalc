@@ -1,0 +1,84 @@
+.example-icon{
+    margin-right: 1em;
+}
+.toolbar-main
+{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    /* left: 0;
+    right: 0;
+    height: 10vh; */
+}
+
+.index-name
+{
+    display: inline;
+    margin-left: calc(100vw - 65vw);
+}
+
+.toolbar-elems
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.logo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index-selector
+{
+    /* display: block; */
+    /* margin: 1em; */
+    /* margin-left: 200px; */
+    /* margin-top: 10vh; */
+}
+
+mat-toolbar
+{
+    background-color: #3f51b5;
+}
+
+.OI-changes-container
+{
+    display: flex;
+        
+
+}
+
+.OI-changes
+{
+    font-size: 0.8em;
+    margin-right: 2em;
+}
+
+.butn
+{
+    margin-left: 1em;
+}
+
+.butn.del-btn
+{
+    background-color: rgb(190, 17, 17);
+}
+
+.butn.mode
+{  
+    background-color: rgb(214, 214, 214);
+    color: black;
+}
+
+.btns-container
+{
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
