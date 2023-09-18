@@ -19,8 +19,8 @@ export class DataFetcherService {
 
   loadCountTriggerVariable = new BehaviorSubject("a");
 
-  API = "http://localhost:4444/api/v1/"
-  // API = "/api/v1/"
+  // API = "http://localhost:4444/api/v1/"
+  API = "/api/v1/"
 
   getDataOfSymbol(symbol: string)
   {
