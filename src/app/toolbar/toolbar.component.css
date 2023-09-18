@@ -75,6 +75,12 @@ mat-toolbar
     color: black;
 }
 
+.butn.config
+{  
+    background-color: rgb(9, 123, 108);
+    color: gainsboro;
+}
+
 .btns-container
 {
     

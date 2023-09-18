@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PcrgraphComponent } from './pcrgraph/pcrgraph.component';
 import { PcrloggerComponent } from './pcrlogger/pcrlogger.component';
+import { StockconfigComponent } from './stockconfig/stockconfig.component';
 
 const routes: Routes = [
   { 
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'data',
         component: PcrloggerComponent
+      },
+      {
+        path: 'config',
+        component: StockconfigComponent
       }
     ]
   }

@@ -38,4 +38,19 @@ export class DataFetcherService {
     return this.httpClient.delete(this.API + "/dropdatabase")
   }
 
+  getEnabledStocks()
+  {
+    return this.httpClient.get(this.API + 'getenabledstocks')
+  }
+
+  enableStock(symbol: string)
+  {
+    return this.httpClient.post(this.API + 'enablestock/' + symbol, {})
+  }
+
+  disableStock(symbol: string)
+  {
+    return this.httpClient.delete(this.API + 'disablestock/' + symbol)
+  }
+
 }

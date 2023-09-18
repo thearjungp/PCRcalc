@@ -15,7 +15,8 @@ export class AppComponent {
   }
 
   ngOnInit(): void {
-    this.router.navigate(['/data'])
+    // this.router.navigate(['/data'])
+    this.router.navigate(['/config'])
 
   }
 }

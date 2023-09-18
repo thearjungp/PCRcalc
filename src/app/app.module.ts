@@ -20,6 +20,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { PcrgraphComponent } from './pcrgraph/pcrgraph.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { createChart } from 'lightweight-charts';
+import { StockconfigComponent } from './stockconfig/stockconfig.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatListModule } from '@angular/material/list';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,7 @@ import { createChart } from 'lightweight-charts';
     IndexSelectorComponent,
     PcrloggerComponent,
     PcrgraphComponent,
+    StockconfigComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +48,8 @@ import { createChart } from 'lightweight-charts';
     NgxAutoScrollModule,
     MatButtonModule,
     NgxChartsModule,
+    MatListModule,
+    MatSlideToggleModule
   ],
   providers: [PcrloggerComponent],
   bootstrap: [AppComponent],

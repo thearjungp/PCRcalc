@@ -11,6 +11,7 @@
                 
                 <div *ngIf="router.url=='/data'"><a><button class="butn mode" routerLink="/graph" mat-raised-button>Graph</button></a></div>
                 <div *ngIf="router.url=='/graph'"><a><button class="butn mode" routerLink="/data" mat-raised-button>Data</button></a></div>
+                <button class="butn config" routerLink="/config" mat-raised-button>Config</button>
                 <div><button class="butn" mat-raised-button (click)="fetchManual()">Fetch</button></div>
                 <div><button class="butn del-btn" mat-raised-button (click)="clearDatabase()">Delete All</button></div>
             </div>
