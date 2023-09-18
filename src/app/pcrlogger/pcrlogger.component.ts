@@ -84,8 +84,8 @@ export class PcrloggerComponent implements OnInit {
           fulldat[i]['time'] = this.giveFormattedDate(d);
           // console.log(fulldat[i]['time'])
         }
-
-        this.dataSource = fulldat
+        
+        this.dataSource = this.sortDataInDescOrder(fulldat)
 
 
         this.table.renderRows();
@@ -114,6 +114,18 @@ export class PcrloggerComponent implements OnInit {
     let amOrPm = hourMinuteSeconds[0]/11 > 1 ? 'PM' : 'AM'
     let formattedTime = hour + ":" + minute + " " + amOrPm
     return formattedTime
+  }
+
+  sortDataInDescOrder(data : any)
+  {
+    let descData = [];
+    let index = 0;
+    for(let i = data.length-1; i >= 0; i--)
+    {
+      descData[index] = data[i];
+      index++;
+    }
+    return descData;
   }
 
 
