@@ -73,12 +73,16 @@ export class PcrloggerComponent implements OnInit {
 
 
           let d = new Date(fulldat[i]['time'])
+          // console.log(d)
+          // this.giveFormattedDate(d)
           let dArray = d.toLocaleTimeString().split(':');
           let hour = dArray[0];
           let min = dArray[1];
           
           // fulldat[i]['time'] = `${d.toLocaleDateString()} ${d.toLocaleTimeString()}`
-          fulldat[i]['time'] = hour + ":" + min;
+          // fulldat[i]['time'] = hour + ":" + min;
+          fulldat[i]['time'] = this.giveFormattedDate(d);
+          // console.log(fulldat[i]['time'])
         }
 
         this.dataSource = fulldat
@@ -90,7 +94,27 @@ export class PcrloggerComponent implements OnInit {
         
 
       }
-    )
+    ) 
   }
+
+  giveFormattedDate(date : Date)
+  {
+    let formattedDate = date.toLocaleDateString() + " -- "
+    formattedDate += this.timeFormatter(date.toLocaleTimeString());
+    // console.log(formattedDate.toString() + "")
+    return formattedDate
+
+  }
+
+  timeFormatter(fulltime: any)
+  {
+    let hourMinuteSeconds = fulltime.split(":")
+    let hour = hourMinuteSeconds[0] % 11
+    let minute = hourMinuteSeconds[1]
+    let amOrPm = hourMinuteSeconds[0]/11 > 1 ? 'PM' : 'AM'
+    let formattedTime = hour + ":" + minute + " " + amOrPm
+    return formattedTime
+  }
+
 
 }
