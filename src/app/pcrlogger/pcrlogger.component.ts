@@ -109,7 +109,7 @@ export class PcrloggerComponent implements OnInit {
   timeFormatter(fulltime: any)
   {
     let hourMinuteSeconds = fulltime.split(":")
-    let hour = hourMinuteSeconds[0] % 11
+    let hour = hourMinuteSeconds[0] % 12
     let minute = hourMinuteSeconds[1]
     let amOrPm = hourMinuteSeconds[0]/11 > 1 ? 'PM' : 'AM'
     let formattedTime = hour + ":" + minute + " " + amOrPm
